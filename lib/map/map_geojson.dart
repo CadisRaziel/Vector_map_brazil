@@ -21,6 +21,10 @@ class ExampleState extends State<MapGeoJson> {
 
   void _loadDataSources() async {
     String geoJson = await rootBundle.loadString('/estados.geojson');
+    // String geoJson = await rootBundle.loadString('/brazil_counties.json');
+    // String geoJson =
+    //     await rootBundle.loadString('/grandes_regioes_json.geojson');
+    // String geoJson = await rootBundle.loadString('/south_america.json');
     MapDataSource ds = await MapDataSource.geoJson(geoJson: geoJson);
     MapLayer layer = MapLayer(
       dataSource: ds,
